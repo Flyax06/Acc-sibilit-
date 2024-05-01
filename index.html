@@ -1,19 +1,110 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="Fiche produit moteur GT3 RS">
+    <link rel="stylesheet" href="style.css">
+    <title>Fiche produit moteur GT3 RS</title>
 </head>
 <body>
     <header>
-
+        <nav class="navbar">
+            <ul>
+                <li><a class="link" href="#accueil">Accueil</a></li>
+                <li><a class="link" href="#porsche">Porsche</a></li>
+                <li><a class="link" href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
-        <p>Coucou</p>
+        <section id="accueil">
+            <h1>Accueil</h1>
+            <video controls width="640" height="360">
+                <source src="./img/Essai  Porsche 911 GT3 RS, taillée pour la piste.mp4" type="video/mp4">
+                <track src="./img/httpswww.youtube.comwatchv1eqi2c7i4kE.vtt" kind="subtitles" srclang="fr" label="Français">
+                <track src="./img/httpswww.youtube.comwatchv1eqi2c7i4kE (1).vtt" kind="subtitles" srclang="en" label="English">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+        <section id="porsche">
+            <h2>Images de la Porsche GT3 RS</h2>
+            <div class="gallery">
+                <img class="img_porsche" src="./img/gt3.jpg" alt="Image 1">
+                <img class="img_porsche" src="./img/gt31.jpg" alt="Image 2">
+            </div>
+        </section>
+        <section>
+            <h2>Porsche GT3 RS</h2>
+            <h2>Moteur Porsche GT3 RS</h2>
+            <p>Le moteur de la Porsche GT3 RS est un chef-d'œuvre de performance et d'ingénierie.</p>
+            <h3>Caractéristiques techniques</h3>
+            <ul>
+                <li><strong>Moteur :</strong> Flat-6</li>
+                <li><strong>Cylindrée :</strong> 4.0 litres</li>
+                <li><strong>Puissance maximale :</strong> 520 chevaux</li>
+                <li><strong>Régime maximal :</strong> 9 000 tr/min</li>
+                <li><strong>Accélération 0-100 km/h :</strong> 3.2 secondes</li>
+                <li><strong>Vitesse maximale :</strong> 312 km/h</li>
+            </ul>
+            <h3>Spécifications</h3>
+            <ul>
+                <li><strong>ABD :</strong> Antiblocage de roues</li>
+                <li><strong>ABS :</strong> Système antiblocage de freins</li>
+                <li><strong>PTM :</strong> Porsche Traction Management</li>
+                <li><strong>PDK :</strong> Porsche Doppelkupplung</li>
+            </ul>
+            <h3>Avantages</h3>
+            <p>Le moteur de la Porsche GT3 RS offre une combinaison exceptionnelle de puissance, de réactivité et de sonorité caractéristique des moteurs atmosphériques.</p>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Vous pouvez nous contacter par mail ou par téléphone</p>
+            <form id="contactForm" action="#" method="post">
+                <fieldset>
+                    <legend>Informations personnelles :</legend>
+                    <label for="nom">Nom :</label>
+                    <input type="text" id="nom" name="nom" required pattern="[A-Za-zÀ-ÖØ-öø-ÿ '-]+"><br>
+                    
+                    <label for="prenom">Prénom :</label>
+                    <input type="text" id="prenom" name="prenom" required pattern="[A-Za-zÀ-ÖØ-öø-ÿ '-]+"><br>
+                    
+                    <label for="email">Email :</label>
+                    <input type="email" id="email" name="email" required><br>
+                    
+                    <label for="telephone">Téléphone :</label>
+                    <input type="tel" id="telephone" name="telephone" required pattern="^(\+33|0)[1-9](\d{2}){4}$"><br>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Message :</legend>
+                    <label for="message">Message :</label>
+                    <textarea id="message" name="message" required minlength="30"></textarea><br>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Plage horaire de contact :</legend>
+                    <label for="plage_horaire">Choisissez une plage horaire :</label>
+                    <select id="plage_horaire" name="plage_horaire" required>
+                        <option value="">-- Sélectionnez une plage horaire --</option>
+                        <option value="matin">Matin (9h-12h)</option>
+                        <option value="apres-midi">Après-midi (14h-18h)</option>
+                        <option value="soir">Soir (18h-20h)</option>
+                    </select><br>
+                </fieldset>
+                
+                <button type="submit">Envoyer</button>
+            </form>
+        </section>
     </main>
     <footer>
-
+        <p>&copy; 2024 Porsche GT3 RS. Tous droits réservés.</p>
+        <div class="footer-links">
+            <a href="#">Politique de confidentialité</a>
+            <a href="#">Conditions d'utilisation</a>
+            <a href="#">Mentions légales</a>
+        </div>
     </footer>
+    
 </body>
 </html>
